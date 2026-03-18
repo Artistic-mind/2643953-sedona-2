@@ -2,6 +2,7 @@
 
 * Студент: [Инесса Пугина](https://up.htmlacademy.ru/htmlcss-individual/2/user/2643953).
 * Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
+* Сайт: [Мой проект Седона](https://artistic-mind.github.io/2643953-sedona-2/)
 
 ---
 
