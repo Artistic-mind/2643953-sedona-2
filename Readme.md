@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Инесса Пугина](https://up.htmlacademy.ru/htmlcss-individual/2/user/2643953).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
