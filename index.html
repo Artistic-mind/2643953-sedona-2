@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>HTML Academy: Седона</title>
   </head>
+
   <body>
     <header class="header">
       <a href="#" class="logo-link">
-        <img
-          class="logo"
-          src="./img/logo.svg"
-          alt="Логотип города"
-          width="140"
-          height="70"
-        >
+        <img class="logo" src="./img/logo.svg" alt="Логотип города" width="140" height="70">
       </a>
       <nav class="nav">
         <ul class="menu">
@@ -28,13 +26,13 @@
           </li>
         </ul>
         <ul class="user-menu">
-          <li class="user-menu-item">
-            <a class="user-menu-link" href="">
+          <li class="user-menu-item ">
+            <a class="user-menu-link search-link" href="">
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
           </li>
-          <li class="user-menu-item">
-            <a class="user-menu-link" href="">
+          <li class="user-menu-item ">
+            <a class="user-menu-link favourite" href="">
               <span class="visually-hidden">Избранное</span>
               <span class="favourite-count">12</span>
             </a>
@@ -48,48 +46,39 @@
     <main class="main">
       <section class="welcome">
         <h1 class="visually-hidden">Приглашение посетить Седону</h1>
-        <img
-          class="img-welcome"
-          src="./img/welcome.svg"
-          alt="Welcome to Sedona"
-          width="458"
-          height="352"
-        >
+        <img class="img-welcome" src="./img/welcome.svg" alt="Welcome to Sedona" width="458" height="352">
+        <div class="divider"></div>
       </section>
       <section class="reasons">
         <div class="ad-block">
           <h2 class="block-title">
-            Седона — небольшой городок в Аризоне,заслуживающий большего!
+            Седона — небольшой городок в Аризоне, заслуживающий большего!
           </h2>
           <p class="block-text">
             Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
           </p>
         </div>
         <ul class="list">
-          <li class="list-item">
+          <li class="list-item dark card-line-light">
             <div class="card">
               <h3 class="card-title">Настоящий городок</h3>
               <p class="card-text">
                 Седона — не аттракцион для туристов, там течёт своя жизнь
               </p>
             </div>
-            <img
-              class="reasons-img"
-              src="./img/photo-1.jpg"
-              alt="Изображение Седоны"
-              width="800"
-              height="385"
-            >
           </li>
-          <li class="list-item">
-            <div class="card">
+          <li class="list-item reasons-pic">
+            <img class="reasons-img" src="./img/photo-1.jpg" alt="Изображение Седоны" width="800" height="385">
+          </li>
+          <li class="list-item light card-line-dark ">
+            <div class="card ">
               <h3 class="card-title">Небольшая площадь</h3>
               <p class="card-text">
                 Все достопримечательности находятся очень близко
               </p>
             </div>
           </li>
-          <li class="list-item">
+          <li class="list-item grey card-line-dark ">
             <div class="card">
               <h3 class="card-title">Красивая дорога</h3>
               <p class="card-text">
@@ -97,7 +86,7 @@
               </p>
             </div>
           </li>
-          <li class="list-item">
+          <li class="list-item light card-line-dark ">
             <div class="card">
               <h3 class="card-title">Мало туристов</h3>
               <p class="card-text">
@@ -105,17 +94,13 @@
               </p>
             </div>
           </li>
-          <li class="list-item">
-            <img
-              class="reasons-img"
-              src="./img/photo-2.jpg"
-              alt="Изображение 'Мост Дьявола'"
-              width="800"
-              height="385"
-            >
+          <li class="list-item devil-pic">
+            <img class="reasons-img" src="./img/photo-2.jpg" alt="Изображение 'Мост Дьявола'" width="800" height="385">
+          </li>
+          <li class="list-item dark card-line-light">
             <div class="card">
-              <h3 class="item-title">Там есть мост дьявола</h3>
-              <p class="item-text">
+              <h3 class="card-title">Там есть мост дьявола</h3>
+              <p class="card-text">
                 Да, по нему можно пройти! Если вы осмелитесь, разумеется
               </p>
             </div>
@@ -132,23 +117,29 @@
           </p>
         </div>
         <ul class="list">
-          <li class="list-item">
-            <h3 class="card-title">Жильё</h3>
-            <p class="card-text">
-              Рекомендуем пожить в настоящем мотеле, всё как в кино!
-            </p>
+          <li class="list-item grey ">
+            <div class="card bonus-house bonus">
+              <h3 class="card-title ">Жильё</h3>
+              <p class="card-text">
+                Рекомендуем пожить в настоящем мотеле, всё как в кино!
+              </p>
+            </div>
           </li>
-          <li class="list-item">
-            <h3 class="card-title">Еда</h3>
-            <p class="card-text">
-              Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
-            </p>
+          <li class="list-item white">
+            <div class="card bonus-food bonus">
+              <h3 class="card-title">Еда</h3>
+              <p class="card-text">
+                Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
+              </p>
+            </div>
           </li>
-          <li class="list-item">
-            <h3 class="card-title">Сувениры</h3>
-            <p class="card-text">
-              Не только китайского, но и настоящего местного производства!
-            </p>
+          <li class="list-item grey">
+            <div class="card bonus-present bonus">
+              <h3 class="card-title">Сувениры</h3>
+              <p class="card-text">
+                Не только китайского, но и настоящего местного производства!
+              </p>
+            </div>
           </li>
         </ul>
       </section>
@@ -160,7 +151,7 @@
             предложения гостиниц в Седоне
           </p>
         </div>
-        <button class="search-button link-button">
+        <button type="button" class="search-button link-button">
           ПОИСК ГОСТИНИЦЫ В седоне
         </button>
       </section>
@@ -197,11 +188,12 @@
             </a>
           </li>
         </ul>
-        <a class="tel" href="tel:+7812812-12-12">+7 (812) 812-12-12</a>
+        <a class="tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="refrence-link" href="#">
           <img src="./img/logo_htmlacademy.png" alt="Логотип html academy">
         </a>
       </section>
     </footer>
   </body>
+
 </html>

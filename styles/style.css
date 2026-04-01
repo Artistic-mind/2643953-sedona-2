@@ -1,0 +1,345 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+.header {
+  margin: 0 70px;
+  display: flex;
+}
+
+.logo-link {
+  display: flex;
+  width: fit-content;
+  max-width: fit-content;
+}
+
+.logo {
+  width: 140px;
+  height: 71px;
+  margin-right: 28px;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 339px;
+  display: flex;
+  justify-self: flex-start;
+
+  align-items: center;
+}
+
+.menu-item {
+  padding: 20px 16px;
+}
+
+.menu-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.user-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-self: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu-item {
+  padding: 22px 12px;
+}
+
+.user-menu-link {
+  text-decoration: none;
+}
+
+.search-link {
+  display: flex;
+  background-image: url("../img/search.png");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 20px;
+  height: 20px;
+}
+
+.favourite {
+  display: flex;
+  position: relative;
+  z-index: 0;
+  background-image: url("../img/heart.png");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.favourite-count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 3px;
+  color: #fff;
+  background-color: #7db54f;
+  border: solid 1px #7db54f;
+  border-radius: 50%;
+
+  z-index: 2;
+}
+
+.link-button {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #756157;
+  border: solid 1px #756157;
+  border-radius: 4px;
+  padding: 8px 34px;
+}
+
+.main {
+  width: 100%;
+}
+
+.welcome {
+  margin-top: 0;
+  padding: 0;
+  background-image: url("../img/index-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  padding: 0;
+  margin: 0;
+  background-image: url("../img/divider.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 57px;
+  bottom: 0;
+  z-index: 1;
+  justify-self: center;
+}
+
+.img-welcome {
+  margin-top: 51px;
+  justify-self: center;
+  align-self: center;
+  width: 458px;
+  height: 352px;
+  margin-bottom: 25px;
+}
+
+.reasons {
+}
+
+.ad-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 69px;
+}
+
+.block-title {
+  margin: 0;
+  padding: 0;
+  width: 620px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.block-text {
+  font-size: 22px;
+  line-height: 26px;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.list-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reasons-pic {
+  grid-column: 2/4;
+}
+
+.devil-pic {
+  grid-column: 1/3;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 230px;
+  margin: 81px 85px;
+}
+
+.dark {
+  background-color: #82b3d3;
+  color: #fff;
+  background-image: url("../img/Rectangle\ 125.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grey {
+  background-color: rgba(130, 179, 211, 0.2);
+  color: #000;
+}
+
+.light {
+  background-color: rgba(130, 179, 211, 0.12);
+  color: #000;
+}
+.white {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+}
+
+.card-line-light {
+  background-image: url("../img/Rectangle\ 125.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-line-dark {
+  background-image: url("../img/Rectangle\ 125_dark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  padding: 0 27.5px;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.reasons-img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.invitation {
+}
+
+.bonus-house {
+  background-image: url("../img/accomodation.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.bonus-food {
+  background-image: url("../img/food.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.bonus-present {
+  background-image: url("../img/presents.svg");
+
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.bonus {
+  box-sizing: border-box;
+  padding-top: 102px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.search {
+  width: 592px;
+  justify-self: center;
+}
+
+.search-button {
+}
+
+.footer {
+}
+
+.subscription {
+}
+
+.subscription-block {
+}
+
+.footer-menu {
+}
+
+.menu-socials {
+}
+
+.menu-socials-item {
+}
+
+.social-link {
+}
+
+.refrence-link {
+}
