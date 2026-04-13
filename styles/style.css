@@ -32,6 +32,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
 }
 
 .header {
@@ -153,7 +154,7 @@ body {
 }
 
 .main {
-  width: 100%;
+  flex-grow: 1;
 }
 
 .welcome {
