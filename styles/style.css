@@ -8,19 +8,23 @@
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   background-color: #f2f2f2;
+}
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #756157;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  color: #fff;
 }
 
 .container {
@@ -38,13 +42,12 @@ body {
 
 .logo-link {
   position: absolute;
-
+  position: 0 0;
 }
 
 .logo {
   width: 140px;
   height: 71px;
-
 }
 
 .nav {
@@ -58,10 +61,12 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 310px;
+  width: 500px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 .menu-item {
@@ -69,7 +74,6 @@ body {
 }
 .menu-item-active {
   border-bottom: solid 2px #000;
-
 }
 
 .menu-link {
@@ -85,19 +89,19 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
-  justify-self: flex-end;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   min-width: 258px;
+  flex-wrap: wrap;
 }
 
 .user-item {
-
+  padding: 22px 12px;
 }
 
 .search-link {
-
-  background-image: url("../img/search.png");
+  display: block;
+  background-image: url("../img/search.svg");
   background-repeat: no-repeat;
   object-fit: cover;
   width: 20px;
@@ -105,19 +109,20 @@ body {
 }
 
 .favourite {
-
+  display: block;
   position: relative;
   z-index: 0;
-  background-image: url("../img/heart.png");
+  background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
-  object-fit: contain;
+  background-position: center;
+  object-fit: cover;
   width: 20px;
   height: 20px;
 }
 
 .favourite-count {
   position: absolute;
-  bottom: 2px;
+  bottom: 11px;
   left: 5px;
   width: 12px;
   height: 12px;
@@ -131,29 +136,20 @@ body {
   font-weight: 400;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #756157;
-  border-radius: 4px;
-  font-family: PT Sans, Arial, sans-serif;
-  text-transform: uppercase;
-}
-
 .menu-button {
   width: 160px;
   height: 36px;
-  justify-self: flex-end;
-
+  margin: 14px 0 14px 20px;
 }
 
 .menu-button-text {
+  font-family: inherit;
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  color: #fff;
+  text-align: center;
   text-decoration: none;
-
+  padding: 9px 3px;
 }
 
 .main {
@@ -162,10 +158,15 @@ body {
 
 .welcome {
   background-color: #042e4a;
-  background-image: url("../img/divider.svg"),url("../img/index-background.jpg");
+  background-image:
+    url("../img/divider.svg"), url("../img/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 57px, cover;
-  background-position: left 0 bottom 0, 0 0;
+  background-size:
+    100% 57px,
+    cover;
+  background-position:
+    left 0 bottom 0,
+    0 0;
   padding-top: 51px;
   padding-bottom: 82px;
   min-height: 485px;
@@ -179,10 +180,6 @@ body {
   height: 352px;
 }
 
-.reasons {
-
-
-}
 .section-block {
   display: flex;
   flex-direction: column;
@@ -191,14 +188,11 @@ body {
 }
 
 .reasons-block {
-
   padding-block-start: 69px;
   padding-block-end: 89px;
-
 }
 
 .block-title {
-
   padding: 0;
   width: 620px;
   font-weight: 700;
@@ -216,59 +210,53 @@ body {
 }
 
 .reasons-title {
- margin: 70px auto 25px;
+  margin: 70px auto 25px;
 }
 
-
-
-
-
-.list {
+.reasons-list {
   margin: 0;
   padding: 0;
   display: grid;
   list-style: none;
   grid-template-columns: 1fr 1fr 1fr;
-
-
-}
-
-.list-item {
-  margin: 0;
-  padding: 0;
-  min-height: 385px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .reasons-item {
-  position: relative;
-
+  margin: 0;
+  text-align: center;
 }
 
-.light::before {
+.reasons-item.pic {
+  display: flex;
+  grid-column: 1/-1;
+}
+
+.pic-text {
+  padding: 102px 0;
+  width: 400px;
+}
+
+.card {
+  padding: 113px 0;
+  width: 400px;
+}
+
+.card-title::before {
   position: absolute;
   content: "";
   width: 60px;
   height: 2px;
+  top: 85px;
+  left: 85px;
+  z-index: 3;
+}
+
+.pic-text .card-title::before {
   background-color: rgba(255, 255, 255, 0.3);
-  top: 188px;
-  left: 169px;
-  z-index: 3;
 }
 
-.dark::before {
-  position: absolute;
-  content: "";
-  width: 60px;
-  height: 2px;
+.card .card-title::before {
   background-color: rgba(0, 0, 0, 0.3);
-  top: 199px;
-  left: 169px;
-  z-index: 3;
 }
 
 .reasons-item:nth-child(2n) {
@@ -279,33 +267,21 @@ body {
   background-color: rgba(131, 179, 211, 0.122);
 }
 
-.reasons-item:first-child {
+.reasons-item.pic {
   background-color: #82b3d3;
 }
-
-.reasons-item:last-child {
-  background-color: #82b3d3;
-}
-
-.reasons-pic {
-  grid-column: 2/4;
-}
-
-.devil-pic {
-  grid-column: 1/3;
-}
-
 
 .card-title {
+  position: relative;
   padding: 0;
-  margin:0 ;
+  margin: 0;
   margin-bottom: 62px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
   width: 230px;
-
+  margin: 0 auto 61px;
 }
 
 .reasons-text {
@@ -313,26 +289,18 @@ body {
 }
 
 .card-text {
-
-
   font-size: 18px;
   line-height: 21px;
   margin: 0 auto;
-   width: 230px;
-
+  width: 230px;
 }
 
-
 .reasons-img {
-  width: 100%;
+  width: 800px;
   height: 100%;
   object-fit: cover;
   padding: 0;
-  margin:0;
-}
-
-.invitation {
-
+  margin: 0;
 }
 
 .invitation-title {
@@ -343,22 +311,25 @@ body {
   margin-bottom: 65px;
 }
 
-.service-item:nth-child(2n-1){
+.services {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.service-item:nth-child(2n-1) {
   background-color: rgba(131, 179, 211, 0.122);
 }
 
 .service-item {
-
-  justify-content: flex-end;
+  text-align: center;
+  padding: 183px 0 80px;
 }
 
 .service-title {
   margin-bottom: 30px;
-
-}
-
-.service-text {
-  margin-bottom:  81px;
 }
 
 .house {
@@ -370,20 +341,18 @@ body {
 .food {
   background-image: url("../img/food.svg");
   background-repeat: no-repeat;
-   background-position: 161px 80px;
+  background-position: 161px 80px;
 }
 
 .gifts {
   background-image: url("../img/presents.svg");
   background-repeat: no-repeat;
-   background-position: 170px 80px;
+  background-position: 170px 80px;
 }
 
 .search {
-
   padding: 97px 0;
   text-align: center;
-
 }
 
 .search-title {
@@ -394,24 +363,17 @@ body {
   margin-bottom: 53px;
 }
 
-
 .search-button {
   justify-self: center;
   width: 376px;
   min-height: 52px;
-  font-family: "PT Sans";
+  font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   weight: 700;
-  color:#fff;
-  font-family: PT Sans, Arial, sans-serif;
-
-}
-
-
-
-.footer {
+  color: #fff;
+  border: none;
 }
 
 .subscription {
@@ -431,17 +393,18 @@ body {
 }
 
 .subsciption-form {
- display: flex;
- justify-content: center;
- margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 
 .subscription-field {
   box-sizing: border-box;
   min-width: 452px;
   padding: 17px 20px;
-  margin:0;
-
+  margin: 0;
+  font-family: inherit;
+  border: none;
 }
 
 .subscription-field::placeholder {
@@ -463,17 +426,25 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: PT Sans, Arial, sans-serif;
+  font-family:
+    PT Sans,
+    Arial,
+    sans-serif;
 }
 
 .footer-menu {
   display: flex;
-  padding: 45px 70px 30px;
-  justify-content: space-between;
+  padding: 38px 30px;
+  justify-content: flex-start;
+  gap: 43px;
+  align-items: center;
 }
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 142px;
 }
 
 .socials-item {
@@ -482,16 +453,10 @@ body {
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
-
-}
-
-.social-link {
-
 }
 
 .social-vk {
   background-image: url("../img/vk.svg");
-
 }
 
 .social-tg {
@@ -504,12 +469,15 @@ body {
 
 .tel {
   font-size: 40px;
-  line-height:40px;
+  line-height: 40px;
   font-weight: 400;
+  width: 720px;
   text-decoration: none;
   color: inherit;
+  font-family: inherit;
+  text-align: center;
 }
 
 .refrence-link {
-
+  justify-self: flex-end;
 }
