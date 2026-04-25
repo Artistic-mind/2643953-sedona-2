@@ -4,9 +4,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>HTML Academy: Седона</title>
+    <title>Седона: Каталог</title>
   </head>
-
   <body>
     <div class="container">
       <header class="header">
@@ -21,14 +20,14 @@
         </a>
         <nav class="nav">
           <ul class="menu">
-            <li class="menu-item menu-item-active">
-              <a class="menu-link" href="#">Главная</a>
+            <li class="menu-item">
+              <a class="menu-link" href="./index.html">Главная</a>
             </li>
             <li class="menu-item">
               <a class="menu-link" href="#">О Седоне</a>
             </li>
-            <li class="menu-item">
-              <a class="menu-link" href="./catalog.html">Гостиницы</a>
+            <li class="menu-item menu-item-active">
+              <a class="menu-link" href="#">Гостиницы</a>
             </li>
           </ul>
           <ul class="user-menu">
@@ -68,7 +67,7 @@
               </a>
             </li>
             <li>
-              <a class="button standard-button standard-button-text" href=""
+              <a class="button standard-button standard-button-text " href=""
                 >Хочу сюда!</a
               >
             </li>
@@ -76,126 +75,212 @@
         </nav>
       </header>
       <main class="main">
-        <section class="welcome">
-          <h1 class="visually-hidden">Приглашение посетить Седону</h1>
-          <img
-            class="img-welcome"
-            src="./img/welcome.svg"
-            alt="Welcome to Sedona"
-            width="458"
-            height="352"
-          />
-          <div class="divider"></div>
-        </section>
-        <section>
-          <h2 class="block-title reasons-title">
-            Седона — небольшой городок в Аризоне, заслуживающий большего!
-          </h2>
-          <p class="block-text reasons-text">
-            Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
-          </p>
-
-          <ul class="reasons-list">
-            <li class="reasons-item pic">
-              <div class="pic-text">
-                <h3 class="card-title">Настоящий городок</h3>
-                <p class="card-text">
-                  Седона — не аттракцион для туристов, там течёт своя жизнь
-                </p>
-              </div>
-              <img
-                class="reasons-img"
-                src="./img/photo-1.jpg"
-                alt="Изображение Седоны"
-                width="800"
-                height="385"
-              />
+        <section class="filters">
+          <h1 class="hotels">Гостиницы Седоны</h1>
+          <ul class="crumbs">
+            <li class="crumbs-item">
+              <a class="crumbs-link home-link" href="./index.html">
+                <span class="visually-hidden">Главная</span>
+              </a>
             </li>
-            <li class="reasons-item card">
-              <h3 class="card-title">Небольшая площадь</h3>
-              <p class="card-text">
-                Все достопримечательности находятся очень близко
-              </p>
-            </li>
-            <li class="reasons-item card">
-              <h3 class="card-title">
-                Красивая<br />
-                дорога
-              </h3>
-              <p class="card-text">
-                Ехать в Седону из Лас-Вегаса совсем нескучно!
-              </p>
-            </li>
-            <li class="reasons-item card">
-              <h3 class="card-title">
-                Мало<br />
-                туристов
-              </h3>
-              <p class="card-text">
-                Большинство едет в Гранд Каньон и толпится там
-              </p>
-            </li>
-            <li class="reasons-item pic">
-              <img
-                class="reasons-img"
-                src="./img/photo-2.jpg"
-                alt="Изображение 'Мост Дьявола'"
-                width="800"
-                height="385"
-              />
-              <div class="pic-text pic-line">
-                <h3 class="card-title">Там есть мост&nbsp;дьявола</h3>
-                <p class="card-text">
-                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
-                </p>
-              </div>
+            <li class="crumbs-item">
+              <a class="crumbs-link" href="#">Гостиницы</a>
             </li>
           </ul>
+          <div class="filter-set">
+            <h2 class="visually-hidden">Фильтр гостиниц</h2>
+            <form
+              class="filter-form"
+              action="https://echo.htmlacademy.ru/courses"
+              method="post"
+            >
+            <fieldset class="filter-box">
+                <legend class="filter-title">Инфраструктура:</legend>
+                <ul class="filter-list">
+                  <li class="filter-item">
+                    <input class="filter-check visually-hidden control" type="checkbox" name="pool" id="pool" checked>
+                    <label class="filter-label control-label checkbox" for="pool">Бассейн</label>
+                  </li>
+                  <li class="filter-item">
+                    <input class="filter-check visually-hidden control" type="checkbox" name="parking"  id="parking" checked>
+                    <label class="filter-label control-label checkbox" for="parking">Парковка</label>
+                  </li>
+                  <li class="filter-item">
+                    <input class="filter-check visually-hidden control" type="checkbox" name="wi-fi" id="wi-fi">
+                    <label class="filter-label control-label checkbox" for="wi-fi">Wi-Fi</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter-box">
+                <legend class="filter-title">Тип Жилья:</legend>
+                <ul class="filter-list">
+                  <li class="filter-item">
+                      <input class="filter-check visually-hidden control" type="radio" name="hotel" id="hotel" value="hotel" checked>
+                      <label class="filter-label control-label radio-btn" for="hotel">Гостиница </label>
+                  </li>
+                  <li class="filter-item">
+                      <input class="filter-check visually-hidden control" type="radio" name="motel" id="motel"  value="motel">
+                       <label class="filter-label control-label radio-btn">Мотель</label>
+                  </li>
+                  <li class="filter-item">
+                      <input class="filter-check visually-hidden control" type="radio" name="appart"  id="appart" value="appart">
+                       <label class="filter-label control-label radio-btn">Апартаменты</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter-box price-box">
+                <legend class="filter-title">Стоимость, ₽:</legend>
+                <div class="range-inputs-wrapper">
+                  <label class="range-label">
+                    <span class="range-label-text"> от</span>
+                    <input class="range-input" type="number" name="min-price" value="0" placeholder="от">
+                  </label>
+                  <label class="range-label">
+                     <span class="range-label-text">  до</span>
+                    <input class="range-input" type="number" name="max-price" value="9000">
+                  </label>
+                </div>
+                <div class="range">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 226px">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="btn-section">
+                <button class="filter-button" type="submit">Применить</button>
+                <button class="filter-button btn-reset" type="reset">Сбросить</button>
+              </div>
+            </form>
+          </div>
         </section>
-        <section>
-          <h2 class="block-title invitation-title">
-            Приезжайте в Седону отдохнуть в&nbsp;комфорте и уюте!
-          </h2>
-          <p class="block-text invitation-text">
-            Опытный персонал и качественное обслуживание!
-          </p>
-          <ul class="services">
-            <li class="service-item house">
-              <h3 class="card-title service-title">Жильё</h3>
-              <p class="card-text service-text">
-                Рекомендуем пожить в&nbsp;настоящем мотеле,<br />
-                всё как в кино!
-              </p>
-            </li>
-            <li class="service-item food">
-              <h3 class="card-title service-title">Еда</h3>
-              <p class="card-text service-text">
-                Всегда заказывайте топовый&nbsp;фирменный бургер,<br />вы не
-                разочаруетесь!
-              </p>
-            </li>
-            <li class="list-item service-item gifts">
-              <h3 class="card-title service-title">Сувениры</h3>
-              <p class="card-text service-text">
-                Не только китайского,<br />но и настоящего местного<br />
-                производства!
-              </p>
-            </li>
-          </ul>
+        <section class="catalog">
+          <div class="result-filter">
+            <h2 class="search-title ">
+              Найдено гостиниц: <span class="hotels-number">38</span>
+            </h2>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">По популярности</option>
+            </select>
+            <ul class="view-list">
+              <li class="view-item">
+                <a class="view-link tiles" href="#">
+                 <span class="visually-hidden">Показать плитками</span>
+                </a>
+              </li>
+              <li class="view-item">
+                <a class="view-link slideshow" href="#">
+                  <span class="visually-hidden">Показать слайдшоу</span>
+                </a>
+              </li>
+              <li class="view-item ">
+                <a class="view-link list" href="#">
+                  <span class="visually-hidden">Показать списком</span>
+                </a>
+              </li>
+           </ul>
+          </div>
+          <h2 class="visually-hidden"> Каталог гостиниц </h2>
+           <ul class="cat-list">
+             <li class="cat-item">
+               <img class="hotel-photo" src="./img/amara.jpg"  alt="фото отеля 'Amara'">
+               <h3 class="card-title hot-title">Amara Resort & Spa</h3>
+               <div class="card-text card-info">
+                <p class="hot-text">Гостиница</p>
+                <p class="hot-text">От 4000 ₽</p>
+               </div>
+               <div class=" card-info">
+                 <a class="button  standard-button-text card-btn" src="#"> Подробнее</a>
+                 <button class="button standard-button-text card-btn favourite-btn" type="button"> в избранное</button>
+               </div>
+               <div class="rating card-info">
+                <span class="stars stars-four"></span>
+                <span class="rating-text">Рейтинг: 8,5</span>
+               </div>
+             </li>
+             <li class="cat-item">
+                <img class="hotel-photo" src="./img/villas.jpg"  alt="фото отеля 'Villas at Poco Diablo'">
+                <h3 class="card-title hot-title">Villas at Poco Diablo</h3>
+               <div class="card-text card-info">
+                <p class="hot-text">Гостиница</p>
+                <p class="hot-text">От 5000 ₽</p>
+               </div>
+               <div class="card-info">
+                 <a class="button standard-button-text card-btn" src="#"> Подробнее</a>
+                 <button class="button standard-button-text card-btn favourite-btn-picked" type="button"> в избранное</button>
+               </div>
+               <div class="rating card-info">
+                <span class="stars stars-four"></span>
+                <span class="rating-text">Рейтинг: 9,2</span>
+               </div>
+             </li>
+             <li class="cat-item">
+                <img class="hotel-photo" src="./img/desert-quail.jpg"  alt="фото отеля 'Desert Quail Inn'">
+                <h3 class="card-title hot-title">Desert Quail Inn</h3>
+               <div class="card-text card-info">
+                <p class="hot-text">Гостиница</p>
+                <p class="hot-text">От 2500 ₽</p>
+               </div>
+               <div class="card-info">
+                 <a class="button standard-button-text card-btn" src="#"> Подробнее</a>
+                 <button class="button standard-button-text card-btn favourite-btn" type="button"> в избранное</button>
+               </div>
+               <div class="rating card-info">
+                <span class="stars stars-three"></span>
+                <span class="rating-text">Рейтинг: 6,9</span>
+               </div>
+             </li>
+             <li class="cat-item">
+                <img class="hotel-photo" src="./img/green-tree.jpg"  alt="фото отеля 'GreenTree Inn'">
+                <h3 class="card-title hot-title">GreenTree Inn</h3>
+               <div class="card-text card-info">
+                <p class="hot-text">Гостиница</p>
+                <p class="hot-text">От 1500 ₽</p>
+               </div>
+               <div class="card-info">
+                 <a class="button standard-button-text card-btn" src="#"> Подробнее</a>
+                 <button class="button standard-button-text card-btn favourite-btn" type="button"> в избранное</button>
+               </div>
+               <div class="rating card-info">
+                <span class="stars stars-two"></span>
+                <span class="rating-text">Рейтинг: 5,0</span>
+               </div>
+             </li>
+           </ul>
+          <div class="pagination">
+            <ul class="pag-list">
+              <li>
+                <a class="pag-btn pag-active" href="#">1</a>
+              </li>
+              <li>
+                <a class="pag-btn" href="#">2</a>
+              </li>
+              <li>
+                <a class="pag-btn" href="#">3</a>
+              </li>
+              <li>
+                <a class="pag-btn" href="#">4</a>
+              </li>
+              <li>
+                <a class="pag-btn pag-empty" href="#">...</a>
+              </li>
+              <li>
+                <a class="pag-btn" href="#">10</a>
+              </li>
+          </div>
         </section>
-        <section class="search">
-          <h2 class="block-title">Заинтересовались?</h2>
-          <p class="block-text search-text">
-            Укажите предполагаемые даты поездки, <br />
-            и мы покажем вам лучшие предложения гостиниц в Седоне
-          </p>
-          <button type="button" class="button search-button">
-            ПОИСК ГОСТИНИЦЫ В седоне
-          </button>
         </section>
       </main>
       <footer>
-        <section class="subscription-index">
+        <section class="subscription">
           <h2 class="block-title subscription-title">
             Подпишитесь на рассылку
           </h2>
@@ -208,7 +293,7 @@
             method="post"
           >
             <input
-              class="subscription-field"
+              class="subscription-field cat-field"
               type="email"
               placeholder="Ваш e-mail"
               name="subscribe"
